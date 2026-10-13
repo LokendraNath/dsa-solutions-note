@@ -1,9 +1,8 @@
 function isPalindrome(n: number): boolean {
   if (n < 0) return false;
-  if (n == 0) return true;
 
-  let copy: number = n;
-  let reverse: number = 0;
+  let original = n;
+  let reverse = 0;
 
   while (n > 0) {
     let lastDigit = n % 10;
@@ -11,6 +10,6 @@ function isPalindrome(n: number): boolean {
     n = Math.floor(n / 10);
   }
 
-  const result = copy == reverse;
-  return result;
+  return original === reverse;
 }
+console.log(isPalindrome(0));
